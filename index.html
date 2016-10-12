@@ -4,8 +4,6 @@
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta property="og:image" content="http://shiresnakamura.com/tobi/web-export/img/cover.png">
 		<meta name="Generator" content="Processing" />
-		<meta name="Description" content="Tobi Nakamura's presense on Simon Fraser University."> 
-		<title>Tobi Nakamura</title>
 		<!-- - - - - - - - - - - - - - - - - - - - - 
 		+
 		+    Wondering how this works? 
@@ -59,8 +57,8 @@
 	}
 	#content {
 		margin: auto;
-		margin-top: 300px;
-		width: 500px;
+		margin-top: 10%;
+		width: 600px;
 		text-align: center;
 	}
 	#footer {
@@ -69,11 +67,49 @@
 		bottom: 50px;
 		right: 50px;
 	}
+	#flip {
+		display: block;
+		width:200px;
+		margin:auto;
+		cursor: pointer;
+	}
+
+	ul.topnav {
+    list-style-type: none;
+    margin: auto;
+    padding: 0;
+    overflow: hidden;
+    color:#FFF;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.topnav li a:hover {color: #999;}
+
+
+@media screen and (max-width: 600px){
+    ul.topnav li.right,
+    ul.topnav li {float: none;}
+    #content {margin-top: 2%; width: 100%;}
+}
 		</style>
 		<!--[if lt IE 9]>
 			<script type="text/javascript">alert("Your browser does not support the canvas tag.");</script>
 		<![endif]-->
 		<script src="processing.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		function showProjects() {
+			document.getElementById("panel").style.display="block";
+		}
+		</script>
 
 
 	</head>
@@ -83,7 +119,6 @@
 						width="700" height="700">
 					<p>Your browser does not support the canvas tag.<br />
 						Get Chrome! At the least use something other than IE.</p>
-					<!-- Note: you can put any alternative content here. -->
 				</canvas>
 				<noscript>
 					<p>JavaScript is required to view the contents of this page.</p>
@@ -92,9 +127,16 @@
 			<div id="page">
 				<div id="content">
 					<h1>Tobi Nakamura</h1>
-					<h2>A Doer of Things</h2>
-					<h1>&#187;</h1>
-					<h3>Contact me about Things</h3>
+					<h2 id="flip" onclick="showProjects()">Projects</h2>
+					<div id="panel" style="display:none;">
+					<ul class="topnav">
+  <li><a href="http://www.sfu.ca/~tshiresn/projects/">LED-Switch mode</a></li>
+  <li><a href="http://shiresnakamura.com/tobi/weather/">Weather Ensamble</a></li>
+  <li><a href="https://github.com/TobiNakamura/MiniDuino">Miniduino</a></li>
+  <li><a href="http://www.sfu.ca/~tshiresn/shrdlu/">SHRDLU Maps</a></li>
+</ul>
+</div>
+					<h3>Contact me</h3>
 					<a href="mailto:tshiresn@sfu.ca"><h2>tshiresn@sfu.ca</h2></a>
 				</div>
 
